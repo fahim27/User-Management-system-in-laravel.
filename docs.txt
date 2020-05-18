@@ -1,0 +1,9 @@
+
+
+User Management Crud Oparation
+
+1.Dynamicly create role.
+2.Staticly cretae permission
+3.Dynamicly assign role for permission.
+4.Dynamicly assing role for  user.
+5.Example app.(create a smiple blog oparation)

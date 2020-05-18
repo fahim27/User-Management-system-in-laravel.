@@ -12,7 +12,10 @@
                        <h3>Post</h3>      
                     </div>  
                     <div class="col-lg-6 text-right">
-                        <a class="btn btn-success" href="{{route('post.create')}}">Add</a>    
+                        @can('publish post')
+                       
+                        <a class="btn btn-success" href="{{route('post.create')}}">Add</a> 
+                        @endcan   
                     </div>  
                     </div>
                 </div>
@@ -50,9 +53,9 @@
                             <td>{{ $post->description }}</td>
                             <td>
 
-                                @can('edit post')
+                                @role('edit post')
                                 <a class="btn btn-success" href="{{ route('post.edit',$post->id) }}">Edit</a>
-                                @endcan
+                                @endrole
                                 <a class="btn btn-danger" href="{{ route('post.edit',$post->id) }}">Delete</a>
 
                             </td>
